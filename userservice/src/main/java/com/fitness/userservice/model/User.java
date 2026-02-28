@@ -13,15 +13,17 @@ import java.time.LocalDateTime;
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
-    public String id;
+    private String id;
     @Column(unique = true,nullable = false)
-    public String email;
+    private String email;
+
+    private String keycloakId;
     @Column(nullable = false)
-    public String password;
-    public String firstName;
-    public String lastName;
+    private String password;
+    private String firstName;
+    private String lastName;
     @Enumerated(EnumType.STRING)
-    public UserRole role = UserRole.USER;
+    private UserRole role = UserRole.USER;
     @CreationTimestamp
     private LocalDateTime createdAt;
     @UpdateTimestamp

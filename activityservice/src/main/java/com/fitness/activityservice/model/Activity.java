@@ -16,6 +16,7 @@ import java.util.Map;
 @Document(collection = "activities")
 @Data
 @Builder
+
 @AllArgsConstructor
 @NoArgsConstructor
 public class Activity {

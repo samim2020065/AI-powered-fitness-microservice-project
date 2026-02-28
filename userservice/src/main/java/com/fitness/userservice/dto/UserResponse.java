@@ -8,12 +8,13 @@ import java.time.LocalDateTime;
 @Data
 public class UserResponse {
 
-    public String userId;
-    public String email;
-    public String password;
-    public String firstName;
-    public String lastName;
-    public UserRole role = UserRole.USER;
+    private String id;
+    private String keycloakId;
+    private String email;
+    private String password;
+    private String firstName;
+    private String lastName;
+    private UserRole role = UserRole.USER;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 }
